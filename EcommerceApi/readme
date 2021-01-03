@@ -1,0 +1,13 @@
+setup .env file 
+ 
+
+JWT_SECRET=hSHUOK89uTTNeAPzDWJv1Edf9lxayXVEr9VJqJ3sXPSCIJ1bIT4pZTUt7BjBEZYA
+API_PASSWORD=hSHUOK89uTTNeAPzDWJv1Edf9
+
+BRAINTREE_ENV=sandbox
+BRAINTREE_MERCHANT_ID=your merchant id
+BRAINTREE_PUBLIC_KEY=your public key
+BRAINTREE_PRIVATE_KEY=your private key
+
+note : you need to create your sandbox on braintree website: https://www.braintreepayments.com/sandbox
+and get your merchant id ,public key, and private key.
