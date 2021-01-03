@@ -10,4 +10,9 @@ BRAINTREE_PUBLIC_KEY=your public key
 BRAINTREE_PRIVATE_KEY=your private key
 
 note : you need to create your sandbox on braintree website: https://www.braintreepayments.com/sandbox
-and get your merchant id ,public key, and private key.
+Log in to obtain your sandbox API credentials. You'll need your:
+
+Sandbox merchant ID
+Public key
+Private key
+Use these credentials for your development and testing.
