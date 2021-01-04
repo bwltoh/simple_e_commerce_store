@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 
 public class Size {
 
-   //part of Product
+
     private int id;
     private int product_id;
     private String size;

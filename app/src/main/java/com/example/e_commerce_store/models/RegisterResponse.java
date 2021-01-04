@@ -7,8 +7,7 @@ public class RegisterResponse {
     private boolean status;
     private String errorNumber;
     private String msg;
-   /* response come with key data and user object or with key error with string value
-   * retrofit will use data or error according to response formate*/
+
     @SerializedName("data")
     private  User user;
     private String error;

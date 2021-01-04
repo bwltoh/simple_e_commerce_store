@@ -3,7 +3,7 @@ package com.example.e_commerce_store.models;
 import androidx.annotation.NonNull;
 
 public class Image {
-    //part of Product
+
     private int id;
     private int product_id;
     private String image;

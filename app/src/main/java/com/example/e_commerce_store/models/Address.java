@@ -2,8 +2,6 @@ package com.example.e_commerce_store.models;
 
 public class Address {
 
-//part of ShippingDetails
-
     private String address1;
     private String address2;
     private String country;

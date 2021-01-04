@@ -62,19 +62,3 @@ public class Order {
         this.created_at = created_at;
     }
 }
-/*{
-   "products":[
-                   {
-                   "product_id":13,
-                       "count":1,
-                      "size":"10"
-                    },
-                    {
-                  "product_id":12,
-                  "count":2,
-                  "size":"9"
-                    }
-                ],
-    "total_price":1300.23,
-    "user_id":5
-}*/

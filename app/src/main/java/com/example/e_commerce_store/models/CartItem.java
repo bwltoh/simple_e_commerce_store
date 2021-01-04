@@ -4,7 +4,7 @@ import androidx.annotation.Nullable;
 
 public class CartItem {
 
-    //part of Cart
+
     private int user_id;
     private int product_id;
     private int amount;

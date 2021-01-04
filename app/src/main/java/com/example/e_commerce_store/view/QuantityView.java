@@ -26,9 +26,7 @@ public class QuantityView extends FrameLayout {
     private int startQuantity;
     private int currentQuantity;
     private int deltaQuantity;
-    private int textColorRes;
-    private int colorRes;
-    private boolean isOutlined;
+
     OnButtonClicked listener;
 
     public interface OnButtonClicked{
@@ -86,27 +84,20 @@ public class QuantityView extends FrameLayout {
             maxQuantity = typedArray.getInteger(R.styleable.QuantityView_maxQuantity, 100);
             startQuantity = typedArray.getInteger(R.styleable.QuantityView_startQuantity, 0);
             deltaQuantity = typedArray.getInteger(R.styleable.QuantityView_deltaQuantity, 1);
-            colorRes = typedArray.getResourceId(R.styleable.QuantityView_colorOfQuantity, R.color.black);
-            textColorRes = typedArray.getResourceId(R.styleable.QuantityView_colorOfText, R.color.black);
-            isOutlined = typedArray.getBoolean(R.styleable.QuantityView_isOutlined, false);
+
             return;
         }
         minQuantity = 0;
         maxQuantity = 100;
         startQuantity = 0;
         deltaQuantity = 1;
-        colorRes = R.color.black;
-        textColorRes = R.color.black;
-        isOutlined = false;
+
     }
     private void setupView() {
-        if (!isOutlined) {
-            add.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.plus));
-            subtract.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.minus));
-        } else {
-            add.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.plus));
-            subtract.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.minus));
-        }
+
+          add.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.plus));
+          subtract.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.minus));
+
         if (startQuantity <= minQuantity) {
             currentQuantity = minQuantity;
 
@@ -122,13 +113,6 @@ public class QuantityView extends FrameLayout {
 
 
 
-    private  int getColor(Context context,int id){
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
-            return context.getColor(id);
-        }else{
-            return context.getResources().getColor(id);
-        }
-    }
 
     private void setCountQuantity(boolean isSubtract) {
         currentQuantity = isSubtract ? subtractQuantity(currentQuantity) : addQuantity(currentQuantity);

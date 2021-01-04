@@ -83,6 +83,7 @@ public class ProductActivity extends BaseActivity implements androidx.appcompat.
 
 
         productViewModel.getProductsLiveData().observe(this, pagedList -> {
+
             adapter.submitList(pagedList);
         });
 
@@ -99,7 +100,7 @@ public class ProductActivity extends BaseActivity implements androidx.appcompat.
 
 
         recyclerView.setAdapter(adapter);
-          array=new ArrayList<>();
+         array=new ArrayList<>();
          suggestionAdapter= new SimpleCursorAdapter(this,R.layout.search_layout,
                  null,new String[]{SearchManager.SUGGEST_COLUMN_TEXT_1},
                  new int[]{R.id.text1},
@@ -147,7 +148,7 @@ public class ProductActivity extends BaseActivity implements androidx.appcompat.
 
         if (countDownTimer!=null)
             countDownTimer.cancel();
-        countDownTimer=new CountDownTimer(500,200) {
+        countDownTimer=new CountDownTimer(200,200) {
             @Override
             public void onTick(long l) {
 

@@ -6,18 +6,12 @@ import java.util.List;
 
 public class Category {
 
-//part of categoryresponse
 
     private int id;
     private String name;
     private String description;
     @SerializedName("products")
     private List<Product> productList;
-   /* private String category;
-    private List<Product> productList;*/
-
-    // Constructor of the class
-    // to initialize the variables
 
 
     public Category(int id, String name, String description, List<Product> productList) {

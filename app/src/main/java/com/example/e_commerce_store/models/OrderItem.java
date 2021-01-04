@@ -1,7 +1,7 @@
 package com.example.e_commerce_store.models;
 
 public class OrderItem {
-    //part of order
+
     private int product_id;
     private int count;
     private String size;

@@ -110,26 +110,27 @@ public interface APIInterface {
     @GET("get_search_results/{category_id}/{search_word}")
     Call<SearchResults> getSearchResults(@Path("category_id") int cat_id,@Path("search_word") String searchWord,@Query("api_password")String apiKey,@Header("Authorization")String auth);
 
-    //get token from server to get nonce from braintree sdk
+
+    //payment
     @Headers({"Content-Type:application/json;charset=UTF-8"})
     @POST("checkout")
     Call<PaymentRespone> getGatewayToken(@Query("api_password") String api_password, @Header("Authorization") String auth);
-    //send nonce and amount(total money) to your server to complete payment process and get the success result
+
+
     @Headers({"Content-Type:application/json;charset=UTF-8"})
-    //@FormUrlEncoded
     @POST("payment")
     Call<PaymentResult> getPaymentState(@Query("api_password") String api_password,@Query("order_id") int orderId,@Query("user_id") int userId,@Query("amount") String amount, @Query("nonce")String nonce, @Header("Authorization") String auth);
-    /*you must  use  @FormUrlEncoded with @Field and mybe @POST as above code*/
+
 
     //make an order
-   // http://localhost:8000/api/make_order?api_password=hSHUOK89uTTNeAPzDWJv1Edf9
+
     @Headers({"Content-Type:application/json"})
     @POST("make_order")
     Call<OrderResponse> makeOrder(@Query("api_password")String apiKey, @Body JsonObject data, @Header("Authorization")String auth);
 
 
     //get all user orders
-    //http://localhost:8000/api/get_all_user_orders?api_password=hSHUOK89uTTNeAPzDWJv1Edf9&user_id=5
+
     @Headers({"Content-Type:application/json;charset=UTF-8"})
     @GET("get_all_user_orders?")
     Call<List<Order>> getAllUserOrders(@Query("api_password") String api_password,@Query("user_id") int user_id, @Header("Authorization") String auth);

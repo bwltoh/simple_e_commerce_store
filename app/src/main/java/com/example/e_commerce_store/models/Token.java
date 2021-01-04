@@ -3,7 +3,6 @@ package com.example.e_commerce_store.models;
 import com.google.gson.annotations.SerializedName;
 
 public class Token {
-//part of LoginResponse
 
     @SerializedName("access_token")
     private String token;

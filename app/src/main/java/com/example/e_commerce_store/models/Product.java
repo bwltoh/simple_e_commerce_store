@@ -10,7 +10,6 @@ import java.util.List;
 public class Product {
 
 
-    //part of ProductDetail and feed
     private int id;
     private String name;
     private String description;

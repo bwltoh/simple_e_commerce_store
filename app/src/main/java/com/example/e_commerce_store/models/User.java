@@ -1,7 +1,7 @@
 package com.example.e_commerce_store.models;
 
 public class User {
-//part of RegisterResponse
+
     private int id;
     private String name;
     private String email;

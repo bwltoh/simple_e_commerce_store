@@ -10,11 +10,10 @@ public class Cart {
     private boolean status;
     private String errorNumber;
     private String msg;
-    /* response come with key data and user object or with key error with string value
-     * retrofit will use data or error according to response formate*/
+
     @SerializedName("data")
     private List<CartItem> cartItemList;
-    private String message;//if cart was empty api send string rather than cart items
+    private String message;
 
     public Cart() {
     }
