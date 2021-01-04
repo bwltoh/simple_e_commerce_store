@@ -1,6 +1,5 @@
 package com.example.e_commerce_store.datasource;
 
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
@@ -85,7 +84,8 @@ public class FeedDataSource extends PageKeyedDataSource<Integer, Product> {
                     callback.onResult(response.body().getProductList(), nextKey);
                     networkState.postValue(NetworkState.LOADED);
 
-                } else networkState.postValue(new NetworkState(NetworkState.Status.FAILED, response.message()));
+                } else
+                    networkState.postValue(new NetworkState(NetworkState.Status.FAILED, response.message()));
 
             }
 
