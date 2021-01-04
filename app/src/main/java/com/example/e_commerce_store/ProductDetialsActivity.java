@@ -112,9 +112,9 @@ public class ProductDetialsActivity extends BaseActivity implements View.OnClick
                         } else {
                             //if there are not any images load default
 
-                            productImages.add(new Image(0, 0, "http://localhost:8000/storage/images/slider1.jpeg"));
+                            productImages.add(new Image(0, 0, "http://localhost:8000/storage/images/slider2.jpeg"));
                             productImages.add(new Image(0, 0, "http://localhost:8000/storage/images/slider3.jpg"));
-                            productImages.add(new Image(0, 0, "http://localhost.3:8000/storage/images/slider4.jpg"));
+
                             productImages.add(new Image(0, 0, "http://localhost.3:8000/storage/images/slider5.jpg"));
                             sliderAdapter.setImageList(productImages);
                         }

@@ -13,7 +13,7 @@
         android:layout_gravity="center"
         android:layout_margin="8dp"
         android:layout_weight="1"
-        android:src="@drawable/slider1" />
+         />
 
     <LinearLayout
         android:layout_width="0dp"
